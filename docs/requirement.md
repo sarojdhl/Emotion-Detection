@@ -53,7 +53,7 @@ Who else should talk to?
 | Name        | Phone           | Email(@gmail.com)  |
 | ------------- |:-------------:| -----:|
 | Saroj Dahal      | 98*** | saroj.dahal |
-| Ksgitiz Regmi     | 98** | kshitiz.regmi |
+| Kshitiz Regmi     | 98** | kshitiz.regmi |
 
 
 Does the current system do things that this system will not do?
