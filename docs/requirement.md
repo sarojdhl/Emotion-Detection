@@ -116,7 +116,8 @@ solved? Also, describe data.
 ## **Caveats**
 
 What are the constraints on the system being built (resourcing, timing, etc.)?
-<br />
+
+
   * The constraint on the system being built is the problem of few data. Also, the timing is an issue; the product has to be built within a small period of time.
 
 
