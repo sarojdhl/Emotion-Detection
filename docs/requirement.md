@@ -1,6 +1,17 @@
 # __Requirement Gathering__
 
 ## About the Company
+
+
+| Name        | Details           | 
+| ------------- |:-------------:|
+| Company Name      | Sk Pscyology| 
+| Location     |Lalitpur| 
+| Compnay type     |Private Clinic| 
+| Employees   |35| 
+
+
+
 What does your business do?
 
 * Recognize the possible emotional outcomes of the psychiatric patients based on a different background, physiological, and behavioral variables.
