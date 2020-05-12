@@ -31,4 +31,4 @@ Our assumptions are
 
 A baseline approach could be:
   * Treating as classification task
-  * Natural language processing
+  * Natural language processing by vectorizing sentences by word count
