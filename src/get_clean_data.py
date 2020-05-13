@@ -1,5 +1,3 @@
-
-
 from clean_data import Clean_data
 import pandas as pd
 from config import DATA_PATH, DATASET
