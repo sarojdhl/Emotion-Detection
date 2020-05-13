@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May 13 12:11:04 2020
 
-@author: Kshitiz Regmi
-"""
 
 from clean_data import clean_data
 import pandas as pd
