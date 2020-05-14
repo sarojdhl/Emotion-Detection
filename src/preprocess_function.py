@@ -27,7 +27,7 @@ class Tfid:
 		self.tfid = TfidfTransformer()
 
 	def fit(self, data):
-		self.vectorize = vectorize
+		self.data = data
 		transformed = self.tfid.fit(self.data)
 		return transformed
 

@@ -11,11 +11,11 @@ def preprocessing(train_data):
 
 	count_vect = Count_vector()
 	fit = count_vect.fit(train_data)
-	vectorized = count_vect.transform(fit)
+	vectorized = count_vect.transform(train_data)
 
 
 	tfid = Tfid()
-	fit = count_vect.fit(train_data)
-	transform = tfid.transform(fit)
+	fit = tfid.fit(vectorized)
+	transform = tfid.transform(vectorized)
 
 	return transform
