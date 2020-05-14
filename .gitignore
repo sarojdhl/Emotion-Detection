@@ -1,8 +1,3 @@
 .vscode
-src/__pycache__/clean_data.cpython-37.pyc
-src/__pycache__/config.cpython-37.pyc
-src/__pycache__/evaluation_score.cpython-37.pyc
-src/__pycache__/get_clean_data.cpython-37.pyc
-src/__pycache__/predict.cpython-37.pyc
-src/__pycache__/preprocess.cpython-37.pyc
-src/__pycache__/train.cpython-37.pyc
+
+src\__pycache__
