@@ -8,7 +8,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 class Count_vector:
 	def __init__(self):
-		self.vectorizer = CountVectorizer()
+		self.vectorizer = CountVectorizer(stop_words='english')
 
 	def fit(self, data):
 		self.data = data

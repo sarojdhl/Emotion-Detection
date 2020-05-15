@@ -1,8 +1,8 @@
 
 
-from clean_data import Clean_data
+from src.data.clean_data import Clean_data
 import pandas as pd
-from config import DATA_PATH, DATASET
+from src.config import DATA_PATH, DATASET
 import os
 
 os.chdir(DATA_PATH)
