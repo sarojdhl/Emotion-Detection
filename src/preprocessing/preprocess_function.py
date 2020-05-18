@@ -9,6 +9,9 @@ from sklearn.feature_extraction.text import CountVectorizer
 class Count_vector:
 	def __init__(self):
 		self.vectorizer = CountVectorizer(stop_words='english')
+		
+	def initial(self):
+		return self.vectorizer
 
 	def fit(self, data):
 		self.data = data
@@ -25,6 +28,9 @@ class Count_vector:
 class Tfid:
 	def __init__(self):
 		self.tfid = TfidfTransformer()
+		
+	def initial(self):
+		return self.tfid
 
 	def fit(self, data):
 		self.data = data

@@ -20,12 +20,12 @@ def train():
 
 	train_data, target_data = get_clean_data()
 
-	preprocessed_data, fit, fit1 = preprocessing.train_preprocessing(train_data)
+	preprocessed_data= preprocessing.train_preprocessing(train_data)
 
 
 	X_train, X_test, y_train, y_test = train_test_split(preprocessed_data, target_data, test_size = TEST_SIZE, random_state = 42)
 
-	model = SGDClassifier(loss='modified_huber', penalty='l2', alpha = LEARNING_RATE, random_state=42,max_iter = MAX_ITER, tol=None)
+	model = SGDClassifier(loss='modified_huber', penalty='l2', alpha = LEARNING_RATE, random_state=2020,max_iter = MAX_ITER, tol=None)
 
 	model.fit(X_train, y_train)
 

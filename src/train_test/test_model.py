@@ -16,12 +16,11 @@ def test(data, model):
 	cleaned_data = [get_value(msg) for msg in data]
 	print(cleaned_data)
 
-	count_vect = pickle.load( open( "../checkpoint/preprocessor/coun_vect.pkl", "rb" ) )
-	tfid = pickle.load( open( "../checkpoint/preprocessor/tfid.pkl", "rb" ) )
+	preprocessor = pickle.load( open( "../checkpoint/preprocessor/preprocessor.pkl", "rb" ) )
+	
 
-	out_vect = count_vect.transform(data)
-	tfid_out = tfid.transform(out_vect)
-
-	output = model.predict(tfid_out)
+	out_vect = preprocessor.transform(data)
+	
+	output = model.predict(out_vect)
 	return output
 
