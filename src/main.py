@@ -3,9 +3,10 @@ from src.train_test.test_model import test
 import pickle
 
 def model_training():
-	model, score = train()
+	model, score_train, score_test = train()
 
-	print(score)
+	print('train', score_train)
+	print('test', score_test)
 
 
 def model_testing(data):
