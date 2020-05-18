@@ -11,3 +11,17 @@
     to login with a token:
         http://localhost:8888/?token=25ff2b10f74268d1b1628d61bde6381301684a26f544f005
 [NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] Notebook notebook/V3_ Date 2020.05.18_ISEAR_data_cleaning.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: 879b00e1-03b8-498d-88b9-ca9183772eca
+[NotebookApp | WARNING] Notebook notebook/V2_ Date 2020.05.14_ISEAR_data_cleaning.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: 0c921379-3c28-4fee-b0cc-7871f449fa53
+[NotebookApp | INFO] Saving file at /notebook/V3_ Date 2020.05.18_ISEAR_data_cleaning.ipynb
+[NotebookApp | WARNING] Notebook notebook/V3_ Date 2020.05.18_ISEAR_data_cleaning.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for 879b00e1-03b8-498d-88b9-ca9183772eca:68e21e4287634734869a6de9f25b1c6f
+[NotebookApp | INFO] Saving file at /notebook/V2_ Date 2020.05.14_ISEAR_data_cleaning.ipynb
+[NotebookApp | WARNING] Notebook notebook/V2_ Date 2020.05.14_ISEAR_data_cleaning.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /notebook/V2_ Date 2020.05.14_ISEAR_data_cleaning.ipynb
+[NotebookApp | WARNING] Notebook notebook/V2_ Date 2020.05.14_ISEAR_data_cleaning.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for 0c921379-3c28-4fee-b0cc-7871f449fa53:22ff6d3ca7c24ff58f06e7ac1d8fb0da
+[NotebookApp | INFO] Interrupted...
+[NotebookApp | INFO] Shutting down 2 kernels

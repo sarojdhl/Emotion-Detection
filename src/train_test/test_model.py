@@ -19,7 +19,7 @@ def test(data, model):
 	preprocessor = pickle.load( open( "../checkpoint/preprocessor/preprocessor.pkl", "rb" ) )
 	
 
-	out_vect = preprocessor.transform(data)
+	out_vect = preprocessor.transform(cleaned_data)
 	
 	output = model.predict(out_vect)
 	return output

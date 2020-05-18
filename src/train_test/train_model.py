@@ -7,7 +7,7 @@ import pickle
 
 
 TEST_SIZE = 0.1
-MAX_ITER = 200
+MAX_ITER = 50
 LEARNING_RATE = 1e-3
 
 def train():
