@@ -6,6 +6,5 @@ DATA_PATH = os.path.join(BASE_DIR, 'data')
 
 DATASET = 'ISEAR.csv'
 
-MODEL_PATH = os.path.join(BASE_DIR, 'model')
-
+CHECKPOINT = os.path.join(BASE_DIR, 'checkpoint')
 
