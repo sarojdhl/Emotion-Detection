@@ -29,8 +29,7 @@ class preprocessing:
 		return (transform, fit, fit1)
 
 
-	def test_preprocessing(test_data):
-		pass
+	
 
 
 

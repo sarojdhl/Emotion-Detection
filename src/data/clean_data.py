@@ -1,17 +1,34 @@
-
 import re
+from nltk.corpus import stopwords
+import nltk
 
-class Clean_data:
-    def __init__(self):  
-        pass
+REPLACE_BY_SPACE_RE = re.compile('[/(){}\[\]\|@,;]')
+BAD_SYMBOLS_RE = re.compile('[^0-9a-z #+_]')
+STOPWORDS = set(stopwords.words('english'))
         
-    def get_value(self,message):
-        # Clean message 
-        self.message =  ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t]) |(\w+:\/\/\S+)", " ", message).split())
-        return self.message
+def get_value(text):
+	'''
+		input:
+			text: text to be cleaned
+
+	 	return: 
+	 		text: cleaned text
+	 		
+	'''
+
+
+
+	text = text.lower()
+	# replace REPLACE_BY_SPACE_RE symbols by space in text
+	text = REPLACE_BY_SPACE_RE.sub(' ', text)
+	# delete symbols which are in BAD_SYMBOLS_RE from text
+	text = BAD_SYMBOLS_RE.sub('', text)
+	# delete stopwors from text
+	text = ' '.join(word for word in text.split() if word not in STOPWORDS)
+	return text
+        
         
 
         
-
 
 

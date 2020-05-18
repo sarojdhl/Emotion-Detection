@@ -7,7 +7,7 @@ import pickle
 
 
 TEST_SIZE = 0.1
-MAX_ITER = 5
+MAX_ITER = 200
 LEARNING_RATE = 1e-3
 
 def train():
@@ -25,11 +25,11 @@ def train():
 
 	X_train, X_test, y_train, y_test = train_test_split(preprocessed_data, target_data, test_size = TEST_SIZE, random_state = 42)
 
-	model = SGDClassifier(loss='hinge', penalty='l2', alpha = LEARNING_RATE, random_state=42,max_iter = MAX_ITER, tol=None)
+	model = SGDClassifier(loss='modified_huber', penalty='l2', alpha = LEARNING_RATE, random_state=42,max_iter = MAX_ITER, tol=None)
 
 	model.fit(X_train, y_train)
 
-	pickle.dump(model, open('../checkpoint/model/02SGD.pkl', 'wb'))
+	pickle.dump(model, open('../checkpoint/model/01SGD.pkl', 'wb'))
 	
 
 	prediction_test = model.predict(X_test)

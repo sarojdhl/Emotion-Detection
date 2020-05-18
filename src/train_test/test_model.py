@@ -1,6 +1,6 @@
 
 import pickle
-from src.data.clean_data import Clean_data
+from src.data.clean_data import get_value
 
 
 def test(data, model):
@@ -12,9 +12,8 @@ def test(data, model):
 	 	return: 
 	 		output: prediction of data using model
 	'''
-	ob=Clean_data()
 
-	cleaned_data = [ob.get_value(msg) for msg in data]
+	cleaned_data = [get_value(msg) for msg in data]
 	print(cleaned_data)
 
 	count_vect = pickle.load( open( "../checkpoint/preprocessor/coun_vect.pkl", "rb" ) )
