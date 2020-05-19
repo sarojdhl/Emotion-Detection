@@ -6,12 +6,6 @@ from src.db import model_score
 def model_training():
 	model, score_train, score_test = train()
 
-	# print( score_train) # Train score
-	# # print( score_test) # test score
-	# print(score_train["accuray"])
-	# print(score_train["precision_recall_f1_score"][0])
-	# print(score_train["precision_recall_f1_score"][1])
-	# print(score_train["precision_recall_f1_score"][2])
 	model_score(model_type = 'Train', accuracy=score_train["accuray"],precision=score_train["precision_recall_f1_score"][0] ,\
 		         recall=score_train["precision_recall_f1_score"][1],f1=score_train["precision_recall_f1_score"][2])
 
@@ -30,10 +24,3 @@ data = ["I love my life very much. I can't believe it","I sad you to death"]
 
 model_training()
 model_testing(data)
-
-
-
-
-
-
-

@@ -53,7 +53,7 @@ def load_saved_model_from_db(model_name,collection_name):
 def predicted_data(message,type):
     db = conn()
     mycon = db['pred_data_msg']
-    info = mycon.insert_one({message: message, 'name': type})
+    info = mycon.insert_one({"message": message, 'name': type})
     print(info.inserted_id, ' saved with this id successfully!')
 
 
