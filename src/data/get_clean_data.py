@@ -1,5 +1,4 @@
 
-
 from src.data.clean_data import get_value
 import pandas as pd
 from src.config import DATA_PATH, DATASET
@@ -23,6 +22,10 @@ def get_clean_data():
 	return df1
 
 def data_aug(data):
+	import random
+
+	print ("Random number with seed 30")
+	random.seed(30)
 	for i in range(7446):
 		spli = data.message[i].split()
 		random.shuffle(spli)

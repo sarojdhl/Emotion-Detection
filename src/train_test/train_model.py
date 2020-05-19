@@ -4,7 +4,7 @@ from src.preprocessing.preprocessing import preprocessing
 from src.evaluation_score import metrics
 from sklearn.linear_model import SGDClassifier
 import pickle
-
+from src.db import *
 
 TEST_SIZE = 0.2
 MAX_ITER = 5
@@ -25,13 +25,19 @@ def train():
 
 	X_train, X_test, y_train, y_test = train_test_split(preprocessed_data, target_data, test_size = TEST_SIZE, random_state = 42, shuffle = True)
 
+	print("\n X_train" ,X_train)
+
 	model = SGDClassifier(loss='modified_huber', penalty='l2', alpha = LEARNING_RATE, random_state=2020,max_iter = MAX_ITER, tol=None)
 
 	model.fit(X_train, y_train)
+#
+	pickled_model  = pickle.dump(model, open('../checkpoint/model/01SGD.pkl', 'wb'))
+	details = save_model_to_db(model = model, model_name = 'SGD_clf',collection_name="model")
+	print(details)
+#
 
-	pickle.dump(model, open('../checkpoint/model/01SGD.pkl', 'wb'))
-	
-
+	# Load model from database 
+	model = load_saved_model_from_db(model_name = 'SGD_clf',collection_name="model")
 	prediction_test = model.predict(X_test)
 	prediction_train = model.predict(X_train)
 
@@ -40,7 +46,5 @@ def train():
 
 
 	return (model, score_train, score_test)
-
-	
 
 

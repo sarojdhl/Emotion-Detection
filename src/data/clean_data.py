@@ -15,9 +15,6 @@ def get_value(text):
 	 		text: cleaned text
 	 		
 	'''
-
-
-
 	text = text.lower()
 	# replace REPLACE_BY_SPACE_RE symbols by space in text
 	text = REPLACE_BY_SPACE_RE.sub(' ', text)
@@ -25,6 +22,7 @@ def get_value(text):
 	text = BAD_SYMBOLS_RE.sub('', text)
 	# delete stopwors from text
 	text = ' '.join(word for word in text.split() if word not in STOPWORDS)
+	print("get_value called: ",text)
 	return text
         
         
