@@ -25,7 +25,6 @@ def train():
 
 	X_train, X_test, y_train, y_test = train_test_split(preprocessed_data, target_data, test_size = TEST_SIZE, random_state = 42, shuffle = True)
 
-	print("\n X_train" ,X_train)
 
 	model = SGDClassifier(loss='modified_huber', penalty='l2', alpha = LEARNING_RATE, random_state=2020,max_iter = MAX_ITER, tol=None)
 
@@ -43,8 +42,6 @@ def train():
 
 	score_train = metrics(y_train, prediction_train)
 	score_test = metrics(y_test, prediction_test)
-
-
 	return (model, score_train, score_test)
 
 

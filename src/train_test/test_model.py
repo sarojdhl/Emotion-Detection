@@ -14,7 +14,7 @@ def test(data, model):
 	'''
 
 	cleaned_data = [get_value(msg) for msg in data]
-	print(cleaned_data)
+	# print(cleaned_data)
 
 	preprocessor = pickle.load( open( "../checkpoint/preprocessor/preprocessor.pkl", "rb" ) )
 	

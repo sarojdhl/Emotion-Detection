@@ -22,7 +22,7 @@ def get_value(text):
 	text = BAD_SYMBOLS_RE.sub('', text)
 	# delete stopwors from text
 	text = ' '.join(word for word in text.split() if word not in STOPWORDS)
-	print("get_value called: ",text)
+	# print("get_value called: ",text)
 	return text
         
         

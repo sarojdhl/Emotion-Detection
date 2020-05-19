@@ -50,3 +50,23 @@ def load_saved_model_from_db(model_name,collection_name):
 
 
 ###################################
+def predicted_data(message,type):
+    db = conn()
+    mycon = db['pred_data_msg']
+    info = mycon.insert_one({message: message, 'name': type})
+    print(info.inserted_id, ' saved with this id successfully!')
+
+
+# def api_call_logs():
+
+def model_score(model_type,accuracy,precision,recall,f1):
+
+    data = {"model_type":model_type,
+    "accuracy":accuracy,
+    "precision":precision,
+    "recall":recall,
+    "f1":f1}
+    db = conn()
+    mycon = db['model_performance']
+    info = mycon.insert_one(data)
+    print(info.inserted_id, ' saved with this id successfully!')

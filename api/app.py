@@ -4,7 +4,6 @@ from flask import abort
 from flask import make_response, jsonify
 from flask import Flask, request, render_template
 from flask_restful import Api, Resource
-
 app = Flask(__name__)
 apis = Api(app)
 # from src.db import *
@@ -14,6 +13,7 @@ from src.preprocessing.preprocessing import preprocessing
 import pickle
 from src.data.clean_data import get_value
 # call a function to recomend
+from src.db import *
 
 
 def predict_type(msg):
@@ -51,13 +51,14 @@ def home():
         return render_template('input.htm')
 
     else:
-        name = request.form.get('usrname')
+        name = request.form.get('usrname')# get username
         msg = request.form.get('comment')
         print(name)
         print(msg)
         predicted_emotion = predict_type(msg)
         output = {"Message": msg, "Emotion": predicted_emotion[0]}
         print (output)
+        predicted_data(msg,predicted_emotion[0])
         return render_template('output.htm',data=output["Message"], emotion=output["Emotion"])
 
 
