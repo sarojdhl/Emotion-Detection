@@ -13,5 +13,5 @@
 
 # To run dockerfile
 
-1.  docker build -t my_img
-2.  docker run -it --name my_container -p 5000:5000 my_img
+1.  docker-compose build
+2.  docker -compose up
