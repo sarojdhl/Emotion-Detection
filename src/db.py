@@ -2,10 +2,10 @@ import pymongo
 import datetime
 import pickle
 import time
-
+import os
 
 def conn():
-    mongo = pymongo.MongoClient()
+    mongo = pymongo.MongoClient(os.environ['DB_PORT_27017_TCP_ADDR'], 27017)
     db = mongo["emotions"]  # database name
     return db
 

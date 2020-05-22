@@ -17,12 +17,12 @@ from src.data.clean_data import get_value
 def predict_type(msg):
     print("Message inpredict_type: ", msg)
     # Call a model to predict message
-    model  = pickle.load(open('../checkpoint/model/01SGD.pkl', 'rb'))  #load_saved_model_from_db(model_name = 'SGD_clf',collection_name='model')
+    model  = pickle.load(open('../checkpoint/model/01SGD.pkl', 'rb'))  
     # mess = list(msg)
     # print(type(mess))
     cleaned_data = [get_value(msg)]
     # Load preprocessor from db
-    preprocessor = pickle.load(open('../checkpoint/preprocessor/preprocessor.pkl','rb'))#load_saved_model_from_db(model_name = 'preprocessor',collection_name='prep')
+    preprocessor = pickle.load(open('../checkpoint/preprocessor/preprocessor.pkl','rb'))
 
     out_vect = preprocessor.transform(cleaned_data)
 
